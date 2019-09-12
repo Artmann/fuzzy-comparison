@@ -1,5 +1,3 @@
 import compare from './compare';
 
-export default {
-  compare
-};
+export default compare;
