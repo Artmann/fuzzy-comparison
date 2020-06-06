@@ -1,5 +1,9 @@
 {
-  "extends": ["airbnb/base", "plugin:jest/recommended"],
+  "extends": [
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
   "plugins": ["jest"],
   "rules": {
     "comma-dangle": ["error", "never"]

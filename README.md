@@ -21,7 +21,7 @@ if (compare('Hello', 'Hallo')) {
 }
 ```
 
-You can adjust how sensitive the comparison is by adjusting the `threshold`.
+You can adjust how sensitive the comparison is by adjusting the `threshold` which has a default value of 2.
 
 ```js
 import compare from 'fuzzy-comparison';

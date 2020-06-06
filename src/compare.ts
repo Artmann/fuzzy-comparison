@@ -3,9 +3,9 @@
  *
  * https://en.wikipedia.org/wiki/Levenshtein_distance#Iterative_with_two_matrix_rows
  */
-function levenshteinDistance(a, b) {
-  let v0 = [];
-  let v1 = [];
+function levenshteinDistance(a: string, b: string): number {
+  let v0: number[] = [];
+  let v1: number[] = [];
 
   for (let i = 0; i <= b.length; i += 1) {
     v0[i] = i;
@@ -22,7 +22,7 @@ function levenshteinDistance(a, b) {
       v1[j + 1] = Math.min(deletionCost, insertionConst, substitutionCost);
     }
 
-    const tmp = v1;
+    const tmp: number[] = v1;
 
     v1 = v0;
     v0 = tmp;
@@ -35,7 +35,7 @@ function levenshteinDistance(a, b) {
  * Returns a value that signifies how similar two strings are. A distance of 0 means that
  * the strings are identical.
  */
-function distance(a, b) {
+function distance(a: string, b: string): number {
   return levenshteinDistance(a, b);
 }
 
@@ -43,7 +43,7 @@ function distance(a, b) {
  * Compares two string and returns true if they are similar and false
  * if they are not that similar.
  */
-export default function compare(firstItem, secondItem, opts = {}) {
+export default function compare(firstItem: string, secondItem: string, opts = {}): boolean {
   if (!firstItem && !secondItem) {
     return true;
   }
